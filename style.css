@@ -1,20 +1,22 @@
 :root {
-    --bg: #f2f5f9;
-    --card: #ffffff;
-    --text: #1f2937;
-    --btn: #2563eb;
+    --bg: #e5e7eb;        /* light gray background */
+    --card: #f9fafb;     /* soft off-white card */
+    --text: #111827;     /* dark gray text */
+    --btn: #2563eb;      /* blue button */
+    --border: #d1d5db;
 }
 
 body.dark {
-    --bg: #0f172a;
-    --card: #1e293b;
-    --text: #e5e7eb;
-    --btn: #38bdf8;
+    --bg: #0f172a;       /* dark slate */
+    --card: #1e293b;    /* dark card */
+    --text: #e5e7eb;    /* light text */
+    --btn: #38bdf8;     /* cyan button */
+    --border: #334155;
 }
 
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: "Segoe UI", Arial, sans-serif;
     background: var(--bg);
     color: var(--text);
 }
@@ -22,31 +24,40 @@ body {
 .container {
     max-width: 900px;
     margin: auto;
-    padding: 15px;
+    padding: 20px;
 }
 
 .card {
     background: var(--card);
-    padding: 15px;
-    border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    padding: 18px;
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
 
 h2 {
     text-align: center;
+    margin-bottom: 15px;
 }
 
 .subject {
     display: grid;
-    grid-template-columns: 1fr 80px 90px 40px;
-    gap: 6px;
-    margin-bottom: 8px;
+    grid-template-columns: 1fr 80px 100px 40px;
+    gap: 8px;
+    margin-bottom: 10px;
 }
 
 input, select {
-    padding: 9px;
+    padding: 10px;
     border-radius: 8px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--border);
+    font-size: 14px;
+    background: white;
+}
+
+body.dark input,
+body.dark select {
+    background: #0f172a;
+    color: var(--text);
 }
 
 button {
@@ -59,22 +70,35 @@ button {
     font-size: 15px;
     margin-top: 8px;
     cursor: pointer;
+    transition: 0.2s ease;
+}
+
+button:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
 }
 
 .small-btn {
-    background: crimson;
+    background: #ef4444; /* red delete */
 }
 
 .result {
     text-align: center;
-    margin-top: 10px;
+    margin-top: 12px;
     font-size: 17px;
     font-weight: bold;
 }
 
 .history {
-    margin-top: 12px;
+    margin-top: 14px;
     font-size: 14px;
+    opacity: 0.9;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 15px 0;
 }
 
 @media (max-width:600px) {

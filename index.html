@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UOM BIT SGPA Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="card">
+        <h2>🎓 UOM BIT – SGPA Calculator</h2>
+
+        <button onclick="toggleDark()">🌙 Toggle Dark Mode</button>
+
+        <div id="subjects"></div>
+
+        <button onclick="addSubject()">➕ Add Subject</button>
+        <button onclick="calculateSGPA()">📊 Calculate SGPA</button>
+
+        <div class="result" id="sgpaResult"></div>
+        <div class="result" id="creditResult"></div>
+
+        <div class="history" id="history"></div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

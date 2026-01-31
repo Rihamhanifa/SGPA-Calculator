@@ -1,0 +1,84 @@
+:root {
+    --bg: #f2f5f9;
+    --card: #ffffff;
+    --text: #1f2937;
+    --btn: #2563eb;
+}
+
+body.dark {
+    --bg: #0f172a;
+    --card: #1e293b;
+    --text: #e5e7eb;
+    --btn: #38bdf8;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 15px;
+}
+
+.card {
+    background: var(--card);
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+h2 {
+    text-align: center;
+}
+
+.subject {
+    display: grid;
+    grid-template-columns: 1fr 80px 90px 40px;
+    gap: 6px;
+    margin-bottom: 8px;
+}
+
+input, select {
+    padding: 9px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    background: var(--btn);
+    color: white;
+    font-size: 15px;
+    margin-top: 8px;
+    cursor: pointer;
+}
+
+.small-btn {
+    background: crimson;
+}
+
+.result {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.history {
+    margin-top: 12px;
+    font-size: 14px;
+}
+
+@media (max-width:600px) {
+    .subject {
+        grid-template-columns: 1fr;
+    }
+}
